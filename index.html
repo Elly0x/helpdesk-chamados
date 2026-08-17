@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de Chamados</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="frame">
+    <div class="titlebar">
+      <span class="dot red"></span>
+      <span class="dot amber"></span>
+      <span class="dot teal"></span>
+      <span class="path">~/helpdesk/chamados</span>
+    </div>
+    <div class="content">
+      <div class="topbar">
+        <div>
+          <h1><span class="prompt">listar-chamados</span><span class="cursor"></span></h1>
+          <p class="subtitle" id="subtitle-count">carregando...</p>
+        </div>
+        <a class="btn primary" href="novo.html">+ Novo Chamado</a>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Status</th>
+            <th>Prioridade</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-chamados"></tbody>
+      </table>
+
+      <footer class="hint">// clique em um chamado para ver os detalhes e alterar o status</footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>renderLista();</script>
+</body>
+</html>

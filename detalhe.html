@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalhe do Chamado</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="frame">
+    <div class="titlebar">
+      <span class="dot red"></span>
+      <span class="dot amber"></span>
+      <span class="dot teal"></span>
+      <span class="path">~/helpdesk/chamados/detalhe</span>
+    </div>
+    <div class="content" id="detalhe-container">
+      <div class="topbar">
+        <div>
+          <h1><span class="prompt" id="chamado-heading">chamado</span><span class="cursor"></span></h1>
+          <p class="subtitle">detalhes e status do chamado</p>
+        </div>
+        <a class="btn" href="index.html">&lt; Voltar</a>
+      </div>
+
+      <div class="field-row">
+        <div class="field-key">Título</div>
+        <div class="field-value" id="campo-titulo"></div>
+      </div>
+      <div class="field-row">
+        <div class="field-key">Descrição</div>
+        <div class="field-value" id="campo-descricao"></div>
+      </div>
+      <div class="field-row">
+        <div class="field-key">Prioridade</div>
+        <div class="field-value" id="campo-prioridade"></div>
+      </div>
+      <div class="field-row">
+        <div class="field-key">Status</div>
+        <div class="field-value">
+          <select id="select-status">
+            <option value="aberto">Aberto</option>
+            <option value="andamento">Em Andamento</option>
+            <option value="fechado">Fechado</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-key">Aberto em</div>
+        <div class="field-value" id="campo-abertura"></div>
+      </div>
+      <div class="field-row">
+        <div class="field-key">Fechado em</div>
+        <div class="field-value" id="campo-fechamento"></div>
+      </div>
+
+      <div class="detail-actions">
+        <button type="button" class="btn danger" id="btn-fechar">Fechar Chamado</button>
+      </div>
+
+      <footer class="hint">// mudar o status ou clicar em "Fechar Chamado" salva direto no navegador (localStorage)</footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>renderDetalhe();</script>
+</body>
+</html>

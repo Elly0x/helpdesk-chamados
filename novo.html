@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novo Chamado</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="frame">
+    <div class="titlebar">
+      <span class="dot red"></span>
+      <span class="dot amber"></span>
+      <span class="dot teal"></span>
+      <span class="path">~/helpdesk/chamados/novo</span>
+    </div>
+    <div class="content">
+      <h1><span class="prompt">abrir-chamado</span><span class="cursor"></span></h1>
+      <p class="subtitle">preencha os campos para registrar um novo chamado</p>
+
+      <form id="form-novo">
+        <div>
+          <label for="titulo">título</label>
+          <input type="text" id="titulo" name="titulo" placeholder="ex: impressora do 2º andar não liga">
+        </div>
+
+        <div>
+          <label for="descricao">descrição</label>
+          <textarea id="descricao" name="descricao" placeholder="descreva o problema com o máximo de detalhes possível"></textarea>
+        </div>
+
+        <div>
+          <label>prioridade</label>
+          <div class="radio-group">
+            <label><input type="radio" name="prioridade" value="baixa"> Baixa</label>
+            <label><input type="radio" name="prioridade" value="media" checked> Média</label>
+            <label><input type="radio" name="prioridade" value="alta"> Alta</label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a class="btn" href="index.html">Cancelar</a>
+          <button type="submit" class="btn primary">Salvar Chamado</button>
+        </div>
+      </form>
+
+      <footer class="hint">// ao salvar, o chamado é criado com status "Aberto" e volta pra lista</footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>initFormNovo();</script>
+</body>
+</html>
